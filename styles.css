@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 350px;
+    }
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Cream);
+    height: calc(100vh - 1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.main-img img {
+    display: block;
+}
+
+.card-right-side {
+    background-color: var(--White);
+    padding: 2rem;
+}
+
+.small-heading {
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 4px;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    font-weight: 500;
+}
+
+.big-heading {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.description {
+    color: var(--Dark-grayish-blue);
+    margin: 1rem 0 1rem 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.price-section {
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+.left-price {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.right-price {
+    text-decoration-line: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+.button {
+    background-color: var(--Dark-cyan);
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    display: inline-block;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: var(--White);
+    border-radius: .5rem;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 39%, 19%);
+}
+
+.cart-img {
+    display: inline-block;
+    width: 1.0714rem;
+    height: 1.142857rem;
+    margin: 0 .5rem 0 0;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 576px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .main-img, .card-right-side {
+        display: inline-block;
+    }
+    .main-img {
+        width: 50%;
+    }
+    .card-right-side {
+        width: 50%;
+    }
+}
